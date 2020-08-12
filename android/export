@@ -1,0 +1,4 @@
+export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH" WORKON_HOME=/Users/alex/.virtualenvs
+export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH" WORKON_HOME=/Users/alex/.virtualenvs
+export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH" WORKON_HOME=/Users/alex/.virtualenvs
+export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH" WORKON_HOME=/Users/alex/.virtualenvs
