@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import FeatherIco from 'react-native-vector-icons/Feather';
+import MaterialCommunityIconsIco from 'react-native-vector-icons/MaterialCommunityIcons';
 import moment from 'moment';
 // Components
 import ActivityTitle from '../../components/Header/ActivityTitle';
@@ -25,17 +26,47 @@ const VitalsHome = ({ navigation }) => {
   }
 
   const [selectedDayNumber, setSelectedDayNumber] = React.useState(currentDayNumber);
+  const [ tempValue, setTempValue ] = React.useState(null);
+  const [ spValue1, setSpValue1 ] = React.useState(null);
+  const [ spValue2, setSpValue2 ] = React.useState(null);
+  const [ bloodValue1, setBloodValue1 ] = React.useState(null);
+  const [ bloodValue2, setBloodValue2 ] = React.useState(null);
 
   const onSelectDayNumber = (num) => {
     setSelectedDayNumber(num);
+  }
+
+  const onStartMeasure = () => {
+    navigation.navigate('Measure', {
+      finishMeasure: onFinishMeasure
+    })
+  }
+
+  const onFinishMeasure = data => {
+    console.log('onFinishMeasure', data);
+    if (data.tempValue != 0) {
+      setTempValue(data.tempValue);
+    }
+    if (data.spValue1 != 0) {
+      setSpValue1(data.spValue1);
+    }
+    if (data.spValue2 != 0) {
+      setSpValue1(data.spValue2);
+    }
+    if (data.bloodValue1 != 0) {
+      setBloodValue1(data.bloodValue1);
+    }
+    if (data.bloodValue2 != 0) {
+      setBloodValue2(data.bloodValue2);
+    }
   }
 
   return (
     <View style={styles.screen}>
       <ActivityTitle
         title='Vitals'
-        onLeft={() => navigation.navigate('Measure')}
-        onRight={() => navigation.navigate('Measure')} />
+        onLeft={onStartMeasure}
+        onRight={onStartMeasure} />
       <View style={styles.headerDateContainer}>
         <Text style={styles.headerDate}>
           {moment(currentDate).format('MMM DD, YYYY')}
@@ -66,14 +97,46 @@ const VitalsHome = ({ navigation }) => {
         <View style={styles.vitalsColumnContainer}>
           <View style={styles.temperatureSection}>
             <Text style={styles.sectionTitle}>Temperature</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+              <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', }}>{tempValue ? tempValue : 'N/A'}</Text>
+              {tempValue && <MaterialCommunityIconsIco
+                name='temperature-fahrenheit'
+                size={20}
+                color='white'
+                style={{ marginTop: 10 }}/>}
+            </View>
           </View>
           <View style={styles.oximeterSection}>
             <Text style={styles.sectionTitle}>Oximeter</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+            {spValue1 == null ?
+              <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>N/A</Text>:
+              <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+                <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>96</Text>
+                <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', marginTop: 14, marginRight: 10 }}>%</Text>
+                <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>78</Text>
+                <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', marginTop: 14 }}>bpm</Text>
+              </View>
+              }
+            </View>
           </View>
         </View>
         <View style={styles.vitalsColumnContainer}>
           <View style={styles.bloodSection}>
             <Text style={styles.sectionTitle}>Blood</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+            {bloodValue1 == null ?
+              <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>N/A</Text>:
+              <View>
+                <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+                  <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', }}>124</Text>
+                  <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', marginTop: 10 }}>/</Text>
+                  <Text style={{ color: 'red', fontSize: 30, fontWeight: 'bold', marginTop: 12 }}>{' '}70</Text>
+                </View>
+                  <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', marginTop: 14 }}>mmHg</Text>
+              </View>
+              }
+            </View>
           </View>
           <View style={styles.faceSection}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -83,7 +146,7 @@ const VitalsHome = ({ navigation }) => {
           </View>
         </View>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Measure')}
+          onPress={onStartMeasure}
           style={styles.measureBtn}>
           <Text style={styles.measureBtnText}>Measure{'\n'}Now</Text>
         </TouchableOpacity>

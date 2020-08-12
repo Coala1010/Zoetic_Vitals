@@ -67,6 +67,8 @@ export default StyleSheet.create({
     borderRadius: 20,
     marginVertical: 10,
     padding: 15,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   oximeterSection: {
     backgroundColor: brandColors.brandPrimary,
@@ -74,6 +76,8 @@ export default StyleSheet.create({
     borderRadius: 20,
     marginVertical: 10,
     padding: 15,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   bloodSection: {
     backgroundColor: '#07BCC5',
@@ -81,6 +85,8 @@ export default StyleSheet.create({
     borderRadius: 20,
     marginVertical: 10,
     padding: 15,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   faceSection: {
     backgroundColor: '#F7F7F7',
@@ -103,8 +109,6 @@ export default StyleSheet.create({
     bottom: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    // borderColor: '#E72975',
-    // borderWidth: 5,
   },
   measureBtn: {
     width: 80,

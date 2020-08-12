@@ -7,137 +7,57 @@ const routeWidth = Dimensions.get('window').width - layoutStyles.paddingXXLarge 
 export default StyleSheet.create({
   screen: {
     flex: 1,
-    paddingTop: getStatusBarHeight(),
-    paddingBottom: 10,
-    backgroundColor: brandColors.brandPrimary,
-  },
-  mainScreen: {
-    flex: 1,
-    ...layoutStyles.paddingLRXXL,
+    // paddingTop: getStatusBarHeight(),
+    // paddingBottom: 10,
+    paddingHorizontal: 20,
+    backgroundColor: 'white',
   },
   elementMargin: {
     marginVertical: 10,
   },
-  activityHeaderMargin: {
-    marginTop: 10,
-  },
-  plusIcon: {
-    fontFamily: textStyles.fontGizmo,
-    fontSize: 40,
-    color: brandColors.brandPrimary,
-  },
-  tabviewHeader: {
-    fontFamily: textStyles.fontPrimarySemiBold,
-    fontSize: 15,
-    color: brandColors.brandBlack,
-  },
-  trashIcon: {
-    fontFamily: textStyles.fontGizmo,
-    fontSize: 23,
-    color: 'white',
-    marginTop: 5,
-  },
-  bottomContainer: {
-    width: '100%',
-    position: 'absolute',
-    bottom: 0,
+  headerContainer: {
+    flexDirection: 'row',
     alignSelf: 'center',
-  },
-  container: {
-    flex: 1,
-    backgroundColor: brandColors.backgroundColor,
     marginTop: 10,
   },
-  rowFront: {
-    backgroundColor: brandColors.backgroundColor,
-    justifyContent: 'center',
-    height: 50,
-    marginVertical: 10,
-  },
-  rowBack: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    marginVertical: 10,
-    height: 50,
+  headerBtn: {
+    width: 100,
     alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 10,
   },
-  rowBackBtnContainer: {
-    width: 60,
-    height: '100%',
-    backgroundColor: brandColors.backgroundColor,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
+  headerText: { 
+    fontWeight: 'bold',
+    fontSize: 16,
   },
-  deleteBtn: {
-    flex: 1,
-    backgroundColor: brandColors.greyMedium,
+  separator: {
+    width: 90,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: brandColors.brandPrimary
+  },
+  measureItemContainer: {
+    backgroundColor: '#F7F7F7',
+    height: 150,
+    borderRadius: 15,
+    marginVertical: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  personContainer: {
+  measureTextContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    width: '100%',
     alignItems: 'center',
+    paddingHorizontal: 10,
   },
-  personSection: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  personAvatar: {
-    width: 60,
-    height: 60,
-    borderRadius: 10,
-  },
-  articleTitle: {
-    fontFamily: textStyles.fontPrimarySemiBold,
-    fontSize: 14,
-    color: brandColors.brandBlack,
-  },
-  personName: {
-    fontFamily: textStyles.fontPrimarySemiBold,
-    fontSize: 14,
-    color: brandColors.brandBlack,
-  },
-  personBirthday: {
-    fontFamily: textStyles.fontPrimaryLight,
-    fontSize: 14,
-    color: brandColors.brandBlack,
-    marginTop: 3,
-  },
-  likeText: {
-    fontFamily: textStyles.fontPrimaryLight,
-    fontSize: 16,
-    color: brandColors.brandBlack,
-    marginHorizontal: 5,
-  },
-  heartIcon: {
-    fontFamily: textStyles.fontGizmo,
-    fontSize: 20,
-    color: brandColors.brandBlack,
-  },
-  backBtnContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  backBtnText: {
-    fontFamily: textStyles.fontPrimaryLight,
-    fontSize: 16,
-    color: 'white',
-  },
-  publishText: {
-    fontFamily: textStyles.fontPrimarySemiBold,
-    fontSize: 26,
-    color: 'white',
-  },
-  publishDate: {
-    fontFamily: textStyles.fontPrimarySemiBold,
-    fontSize: 14,
-    color: 'white',
-  },
-  routeScreen: {
-    width: routeWidth,
+  startMeasureBtn: {
+    position: 'absolute',
+    right: 0,
+    backgroundColor: 'rgba(60, 40, 100, 0.8)',
+    width: '67%',
     height: '100%',
-    backgroundColor: brandColors.backgroundColor,
+    borderRadius: 15,
+    justifyContent: 'center',
   },
 });

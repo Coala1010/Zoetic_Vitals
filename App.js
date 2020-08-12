@@ -69,7 +69,7 @@ const VitalStackScreen = () => {
           headerTitle: 'Vitals',
           headerTintColor: brandColors.brandPrimary,
           headerStyle: {
-            backgroundColor: brandColors.backgroundColor,
+            backgroundColor: 'white',
             shadowColor: 'transparent',
             shadowRadius: 0,
             shadowOffset: {
