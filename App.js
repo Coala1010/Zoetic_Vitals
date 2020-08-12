@@ -16,6 +16,7 @@ import SignUpPatient from './src/screens/Auth/SignUpPatient';
 import HomeFirst from './src/screens/Home/HomeFirst';
 // Vitals
 import VitalsHome from './src/screens/Vitals/VitalsHome';
+import MeasureScreen from './src/screens/Vitals/Measure';
 // Doctor
 import DoctorFirst from './src/screens/Doctor/DoctorFirst';
 
@@ -54,12 +55,28 @@ const VitalStack = createStackNavigator();
 const VitalStackScreen = () => {
   return (
     <VitalStack.Navigator
-      initialRouteName='VitalsFirst'
+      initialRouteName='VitalsHome'
       screenOptions={{ gestureEnabled: false }}>
       <VitalStack.Screen
-        name="VitalsFirst"
+        name="VitalsHome"
         component={VitalsHome}
         options={{ headerShown: false }} />
+      <VitalStack.Screen
+        name="Measure"
+        component={MeasureScreen}
+        options={{
+          headerBackTitle: ' ',
+          headerTitle: 'Vitals',
+          headerTintColor: brandColors.brandPrimary,
+          headerStyle: {
+            backgroundColor: brandColors.backgroundColor,
+            shadowColor: 'transparent',
+            shadowRadius: 0,
+            shadowOffset: {
+              height: 0
+            }
+          }
+        }}/>
     </VitalStack.Navigator>
   );
 }
