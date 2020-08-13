@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import {
   ActivityIndicator,
-  Image,
+  ScrollView,
   Text,
   View,
-  Dimensions,
   TouchableOpacity,
 } from 'react-native';
 import MaterialCommunityIconsIco from 'react-native-vector-icons/MaterialCommunityIcons';
-// Components
-import ActivityTitle from '../../components/Header/ActivityTitle';
-import AppInput from '../../components/Input/AppInput';
 // Styles
 import styles from './measureScreenStyles';
 import { textStyles, brandColors } from '../../styles/baseStyles';
-import { IC_SAMPLE } from '../../utils/Images';
 import NativeButton from '../../components/Buttons/NativeButton';
 
 const MeasureScreen = ({ navigation, route }) => {
@@ -87,104 +82,105 @@ const MeasureScreen = ({ navigation, route }) => {
         </TouchableOpacity>
       </View>
 
-      <View style={{ marginVertical: 15}}>
-      <View style={styles.measureItemContainer}>
-        <View style={styles.measureTextContainer}>
-          <Text style={{ color: brandColors.brandPrimary, fontSize: 14, fontWeight: 'bold' }}>Temperature</Text>
-          {tempLoading ?
-            <ActivityIndicator size="large" color={brandColors.brandPrimary} />:
-            <View style={{ flexDirection: 'row' }}>
-              <Text
-                style={{
-                  color: tempMeasured ? brandColors.brandPrimary : 'grey',
-                  fontSize: 50,
-                  fontWeight: 'bold'
-                }}>
-                  {tempValue}
-              </Text>
-              <MaterialCommunityIconsIco
-                name='temperature-fahrenheit'
-                size={20}
-                color={tempMeasured ? brandColors.brandPrimary : 'grey'}
-                style={{ marginTop: 40 }}/>
-            </View>}
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.measureItemContainer}>
+          <View style={styles.measureTextContainer}>
+            <Text style={{ color: brandColors.brandPrimary, fontSize: 14, fontWeight: 'bold' }}>Temperature</Text>
+            {tempLoading ?
+              <ActivityIndicator size="large" color={brandColors.brandPrimary} />:
+              <View style={{ flexDirection: 'row' }}>
+                <Text
+                  style={{
+                    color: tempMeasured ? brandColors.brandPrimary : 'grey',
+                    fontSize: 50,
+                    fontWeight: 'bold'
+                  }}>
+                    {tempValue}
+                </Text>
+                <MaterialCommunityIconsIco
+                  name='temperature-fahrenheit'
+                  size={20}
+                  color={tempMeasured ? brandColors.brandPrimary : 'grey'}
+                  style={{ marginTop: 40 }}/>
+              </View>}
+          </View>
+          {(!tempMeasured && !tempLoading) &&
+            <TouchableOpacity
+              onPress={onStartTempMeasure}
+              style={styles.startMeasureBtn}>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Wear Thermometer to{'\n'}view Temperature</Text>
+            </TouchableOpacity>}
         </View>
-        {(!tempMeasured && !tempLoading) &&
-          <TouchableOpacity
-            onPress={onStartTempMeasure}
-            style={styles.startMeasureBtn}>
-            <Text style={{ color: 'white', textAlign: 'center' }}>Wear Thermometer to{'\n'}view Temperature</Text>
-          </TouchableOpacity>}
-      </View>
-      <View style={styles.measureItemContainer}>
-        <View style={styles.measureTextContainer}>
-          <Text style={{ color: brandColors.brandPrimary, fontSize: 14, fontWeight: 'bold' }}>Blood</Text>
-          {bloodLoading ?
-            <ActivityIndicator size="large" color={brandColors.brandPrimary} />:
-            <View style={{ flexDirection: 'row' }}>
-              <Text
-                style={{
-                  color: bloodMeasured ? brandColors.brandPrimary : 'grey',
-                  fontSize: 50,
-                  fontWeight: 'bold'
-                }}>
-                  {bloodValue1}/
-              </Text>
-              <Text
-                style={{
-                  color: bloodMeasured ? '#1CB4B9' : 'grey',
-                  fontSize: 50,
-                  fontWeight: 'bold'
-                }}>
-                  {bloodValue2}
-              </Text>
-              <Text style={{ color: bloodMeasured ? brandColors.brandPrimary : 'grey', marginTop: 40 }}>mmHg</Text>
-            </View>}
+        <View style={styles.measureItemContainer}>
+          <View style={styles.measureTextContainer}>
+            <Text style={{ color: brandColors.brandPrimary, fontSize: 14, fontWeight: 'bold' }}>Blood</Text>
+            {bloodLoading ?
+              <ActivityIndicator size="large" color={brandColors.brandPrimary} />:
+              <View style={{ flexDirection: 'row' }}>
+                <Text
+                  style={{
+                    color: bloodMeasured ? brandColors.brandPrimary : 'grey',
+                    fontSize: 50,
+                    fontWeight: 'bold'
+                  }}>
+                    {bloodValue1}/
+                </Text>
+                <Text
+                  style={{
+                    color: bloodMeasured ? '#1CB4B9' : 'grey',
+                    fontSize: 50,
+                    fontWeight: 'bold'
+                  }}>
+                    {bloodValue2}
+                </Text>
+                <Text style={{ color: bloodMeasured ? brandColors.brandPrimary : 'grey', marginTop: 40 }}>mmHg</Text>
+              </View>}
+          </View>
+          {!bloodMeasured && !bloodLoading &&
+            <TouchableOpacity
+              onPress={onStartBloodMeasure}
+              style={styles.startMeasureBtn}>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Wear blood pressure monitor{'\n'}to view Blood Press</Text>
+            </TouchableOpacity>}
         </View>
-        {!bloodMeasured && !bloodLoading &&
-          <TouchableOpacity
-            onPress={onStartBloodMeasure}
-            style={styles.startMeasureBtn}>
-            <Text style={{ color: 'white', textAlign: 'center' }}>Wear blood pressure monitor{'\n'}to view Blood Press</Text>
-          </TouchableOpacity>}
-      </View>
-      <View style={styles.measureItemContainer}>
-        <View style={styles.measureTextContainer}>
-          <Text style={{ color: brandColors.brandPrimary, fontSize: 14, fontWeight: 'bold' }}>SpO2</Text>
-          {spLoading ?
-            <ActivityIndicator size="large" color={brandColors.brandPrimary} />:
-            <View style={{ flexDirection: 'row' }}>
-              <Text
-                style={{
-                  color: spMeasured ? brandColors.brandPrimary : 'grey',
-                  fontSize: 50,
-                  fontWeight: 'bold',
-                }}>
-                  {spValue1}
-              </Text>
-              <Text style={{ color: spMeasured ? brandColors.brandPrimary : 'grey', marginTop: 40, marginRight: 20 }}>%</Text>
-              <Text style={{ color: spMeasured ? brandColors.brandPrimary : 'grey', marginTop: 20, marginRight: 10 }}>PR</Text>
-              <Text
-                style={{
-                  color: spMeasured ? brandColors.brandPrimary : 'grey',
-                  fontSize: 50,
-                  fontWeight: 'bold'
-                }}>
-                  {spValue2}
-              </Text>
-              <Text style={{ color: spMeasured ? brandColors.brandPrimary : 'grey', marginTop: 40 }}>bpm</Text>
-            </View>}
+        <View style={styles.measureItemContainer}>
+          <View style={styles.measureTextContainer}>
+            <Text style={{ color: brandColors.brandPrimary, fontSize: 14, fontWeight: 'bold' }}>SpO2</Text>
+            {spLoading ?
+              <ActivityIndicator size="large" color={brandColors.brandPrimary} />:
+              <View style={{ flexDirection: 'row' }}>
+                <Text
+                  style={{
+                    color: spMeasured ? brandColors.brandPrimary : 'grey',
+                    fontSize: 50,
+                    fontWeight: 'bold',
+                  }}>
+                    {spValue1}
+                </Text>
+                <Text style={{ color: spMeasured ? brandColors.brandPrimary : 'grey', marginTop: 40, marginRight: 20 }}>%</Text>
+                <Text style={{ color: spMeasured ? brandColors.brandPrimary : 'grey', marginTop: 20, marginRight: 10 }}>PR</Text>
+                <Text
+                  style={{
+                    color: spMeasured ? brandColors.brandPrimary : 'grey',
+                    fontSize: 50,
+                    fontWeight: 'bold'
+                  }}>
+                    {spValue2}
+                </Text>
+                <Text style={{ color: spMeasured ? brandColors.brandPrimary : 'grey', marginTop: 40 }}>bpm</Text>
+              </View>}
+          </View>
+          {!spMeasured && !spLoading &&
+            <TouchableOpacity
+              onPress={onStartSpMeasure}
+              style={styles.startMeasureBtn}>
+              <Text style={{ color: 'white', textAlign: 'center' }}>Wear Oximeter to{'\n'}view SpO2 and PR</Text>
+            </TouchableOpacity>}
         </View>
-        {!spMeasured && !spLoading &&
-          <TouchableOpacity
-            onPress={onStartSpMeasure}
-            style={styles.startMeasureBtn}>
-            <Text style={{ color: 'white', textAlign: 'center' }}>Wear Oximeter to{'\n'}view SpO2 and PR</Text>
-          </TouchableOpacity>}
-      </View>
-      </View>
+      </ScrollView>
 
       <NativeButton
+        style={styles.elementMargin}
         onPress={onCompleteBtn}
         type='primary'
         text='Complete'

@@ -1,11 +1,11 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { textStyles, brandColors } from '../../styles/baseStyles';
 
 export default StyleSheet.create({
   screen: {
     flex: 1,
-    paddingTop: getStatusBarHeight(),
+    paddingTop: Platform.OS === 'ios' ? getStatusBarHeight() : 0,
     backgroundColor: brandColors.brandPrimary,
   },
   elementMargin: {

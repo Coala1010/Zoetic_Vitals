@@ -105,7 +105,7 @@ const VitalsHome = ({ navigation }) => {
             <Text style={styles.sectionTitle}>Temperature</Text>
             <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
               <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', }}>{tempValue ? tempValue : 'N/A'}</Text>
-              {tempValue && <MaterialCommunityIconsIco
+              {tempValue != null && <MaterialCommunityIconsIco
                 name='temperature-fahrenheit'
                 size={20}
                 color='white'

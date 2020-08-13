@@ -1,28 +1,26 @@
-import { Dimensions, StyleSheet } from 'react-native';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { StyleSheet } from 'react-native';
 import { textStyles, brandColors } from '../../styles/baseStyles';
 
 export default StyleSheet.create({
   screen: {
     flex: 1,
-    // paddingTop: getStatusBarHeight(),
-    // paddingBottom: 10,
     paddingHorizontal: 20,
     backgroundColor: 'white',
   },
   elementMargin: {
-    marginVertical: 10,
+    marginVertical: 5,
   },
   headerContainer: {
     flexDirection: 'row',
     alignSelf: 'center',
-    marginTop: 10,
+    marginVertical: 10,
   },
   headerBtn: {
     width: 100,
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 10,
+    marginTop: 5,
   },
   headerText: { 
     fontWeight: 'bold',
@@ -36,7 +34,7 @@ export default StyleSheet.create({
   },
   measureItemContainer: {
     backgroundColor: '#F7F7F7',
-    height: 150,
+    height: 120,
     borderRadius: 15,
     marginVertical: 10,
     justifyContent: 'center',
