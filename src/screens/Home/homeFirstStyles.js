@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { layoutStyles, textStyles, brandColors } from '../../styles/baseStyles';
+import { textStyles, brandColors } from '../../styles/baseStyles';
 
 export default StyleSheet.create({
   screen: {

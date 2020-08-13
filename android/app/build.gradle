@@ -190,17 +190,12 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-config')
     implementation project(':react-native-safe-area-context')
     implementation project(':react-native-vector-icons')
-    implementation project(':react-native-camera')
-    implementation project(':react-native-device-info')
     implementation project(':react-native-firebase')
 
-    // Firebase dependencies
     implementation "com.google.android.gms:play-services-base:16.1.0"
     implementation "com.google.firebase:firebase-core:16.0.9"
-    implementation "com.google.firebase:firebase-messaging:18.0.0"
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules

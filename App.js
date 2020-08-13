@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -8,10 +7,6 @@ import FontAwesomeIco from 'react-native-vector-icons/FontAwesome';
 import MaterialIconsIco from 'react-native-vector-icons/MaterialIcons';
 import FontistoIco from 'react-native-vector-icons/Fontisto';
 
-// Auth Screens
-import AuthLoading from './src/screens/Auth/AuthLoading';
-import SignInPatient from './src/screens/Auth/SignInPatient';
-import SignUpPatient from './src/screens/Auth/SignUpPatient';
 // Home
 import HomeFirst from './src/screens/Home/HomeFirst';
 // Vitals
@@ -22,21 +17,6 @@ import DoctorFirst from './src/screens/Doctor/DoctorFirst';
 
 // Styles
 import { brandColors, textStyles } from './src/styles/baseStyles';
-
-const AuthStack = createStackNavigator();
-const AuthStackScreen = () => {
-  return (
-    <AuthStack.Navigator
-      initialRouteName='SignInPatient'
-      screenOptions={{
-        headerShown: false,
-        gestureEnabled: false,
-      }}>
-      <AuthStack.Screen name='SignInPatient' component={SignInPatient} />
-      <AuthStack.Screen name='SignUpPatient' component={SignUpPatient} />
-    </AuthStack.Navigator>
-  );
-}
 
 const HomeStack = createStackNavigator();
 const HomeStackScreen = () => {
@@ -146,8 +126,6 @@ const App = () => {
             headerShown: false,
             gestureEnabled: false,
           }}>
-          <Stack.Screen name="AuthLoading" component={AuthLoading} />
-          <Stack.Screen name="Auth" component={AuthStackScreen} />
           <Stack.Screen name="App" component={AppStackScreen} />
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,4 +1,5 @@
 import ImagePicker from 'react-native-image-picker';
+import { RNToasty } from 'react-native-toasty';
 
 const getFileNameFromUri = (uri) => {
   let getFilename = uri.split("/");
@@ -74,7 +75,22 @@ const showVideoPicker = (title) => {
   }));
 }
 
+const showErrorToast = (title) => {
+    RNToasty.Error({ title, withIcon: false, tintColor: '#ff5b5b', duration: 1 });
+}
+
+const showNormalToast = (title, forceToast = false) => {
+    RNToasty.Normal({ title, withIcon: false });
+}
+
+const showSuccessToast = (title) => {
+  RNToasty.Success({ title, withIcon: false });
+}
+
 export default {
   showImagePicker,
   showVideoPicker,
+  showErrorToast,
+  showNormalToast,
+  showSuccessToast,
 };

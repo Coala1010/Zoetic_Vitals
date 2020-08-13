@@ -45,9 +45,11 @@ target 'Zoetic' do
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications.podspec"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary.podspec"
 
-  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
+  pod 'Firebase/Core'
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
   target 'ZoeticTests' do
     inherit! :search_paths

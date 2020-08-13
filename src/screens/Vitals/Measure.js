@@ -13,7 +13,7 @@ import ActivityTitle from '../../components/Header/ActivityTitle';
 import AppInput from '../../components/Input/AppInput';
 // Styles
 import styles from './measureScreenStyles';
-import { layoutStyles, textStyles, brandColors } from '../../styles/baseStyles';
+import { textStyles, brandColors } from '../../styles/baseStyles';
 import { IC_SAMPLE } from '../../utils/Images';
 import NativeButton from '../../components/Buttons/NativeButton';
 

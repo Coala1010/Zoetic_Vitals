@@ -35,7 +35,7 @@
 		4C55686C24E2F6670043FB07 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C55685C24E2F6670043FB07 /* EvilIcons.ttf */; };
 		4C55686D24E2F6670043FB07 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C55685D24E2F6670043FB07 /* SimpleLineIcons.ttf */; };
 		4C55686E24E2F6670043FB07 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C55685E24E2F6670043FB07 /* MaterialIcons.ttf */; };
-		4CB79C2724E390D000466405 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CB79C2624E390D000466405 /* GoogleService-Info.plist */; };
+		4C8177B724E58AA600CE1D7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C8177B624E58AA600CE1D7C /* GoogleService-Info.plist */; };
 		4CF43A5924A4138B00AB89AD /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF43A4724A4138900AB89AD /* Montserrat-MediumItalic.ttf */; };
 		4CF43A5A24A4138B00AB89AD /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF43A4824A4138900AB89AD /* Montserrat-Italic.ttf */; };
 		4CF43A5B24A4138B00AB89AD /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF43A4924A4138900AB89AD /* Montserrat-Light.ttf */; };
@@ -80,7 +80,7 @@
 		00E356EE1AD99517003FC87E /* ZoeticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoeticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ZoeticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoeticTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Vital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vital.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Vitals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vitals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Zoetic/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Zoetic/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		4C55685C24E2F6670043FB07 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		4C55685D24E2F6670043FB07 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		4C55685E24E2F6670043FB07 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		4CB79C2624E390D000466405 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C8177B624E58AA600CE1D7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4CF43A4724A4138900AB89AD /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-MediumItalic.ttf"; path = "../assets/fonts/Montserrat/Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
 		4CF43A4824A4138900AB89AD /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Italic.ttf"; path = "../assets/fonts/Montserrat/Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		4CF43A4924A4138900AB89AD /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "../assets/fonts/Montserrat/Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				4CB79C2624E390D000466405 /* GoogleService-Info.plist */,
+				4C8177B624E58AA600CE1D7C /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* Zoetic */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ZoeticTests */,
@@ -277,7 +277,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Vital.app */,
+				13B07F961A680F5B00A75B9A /* Vitals.app */,
 				00E356EE1AD99517003FC87E /* ZoeticTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Zoetic-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Zoetic-tvOSTests.xctest */,
@@ -367,7 +367,7 @@
 			);
 			name = Zoetic;
 			productName = Zoetic;
-			productReference = 13B07F961A680F5B00A75B9A /* Vital.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Vitals.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* Zoetic-tvOS */ = {
@@ -497,7 +497,7 @@
 				4CF43A5E24A4138B00AB89AD /* Montserrat-Regular.ttf in Resources */,
 				4CF43A5C24A4138B00AB89AD /* Montserrat-Bold.ttf in Resources */,
 				4CF43A5A24A4138B00AB89AD /* Montserrat-Italic.ttf in Resources */,
-				4CB79C2724E390D000466405 /* GoogleService-Info.plist in Resources */,
+				4C8177B724E58AA600CE1D7C /* GoogleService-Info.plist in Resources */,
 				4CF43A6A24A4138B00AB89AD /* Montserrat-Medium.ttf in Resources */,
 				4C55686C24E2F6670043FB07 /* EvilIcons.ttf in Resources */,
 				4CF43A6724A4138B00AB89AD /* Montserrat-ThinItalic.ttf in Resources */,
@@ -862,8 +862,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoetic.vital;
-				PRODUCT_NAME = Vital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoetic.vitals;
+				PRODUCT_NAME = Vitals;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -889,8 +889,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoetic.vital;
-				PRODUCT_NAME = Vital;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoetic.vitals;
+				PRODUCT_NAME = Vitals;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

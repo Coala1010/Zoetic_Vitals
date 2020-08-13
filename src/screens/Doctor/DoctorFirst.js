@@ -10,7 +10,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import ActivityTitle from '../../components/Header/ActivityTitle';
 // Styles
 import styles from './doctorFirstStyles';
-import { brandColors, layoutStyles, textStyles } from '../../styles/baseStyles';
+import { brandColors, textStyles } from '../../styles/baseStyles';
 import { IC_SAMPLE } from '../../utils/Images';
 
 const DoctorFirst = ({ navigation }) => {

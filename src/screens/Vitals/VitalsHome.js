@@ -9,9 +9,10 @@ import MaterialCommunityIconsIco from 'react-native-vector-icons/MaterialCommuni
 import moment from 'moment';
 // Components
 import ActivityTitle from '../../components/Header/ActivityTitle';
+import Api from '../../apis/Api';
 // Styles
 import styles from './vitalsHomeStyles';
-import { layoutStyles, textStyles, brandColors } from '../../styles/baseStyles';
+import { textStyles, brandColors } from '../../styles/baseStyles';
 
 const VitalsHome = ({ navigation }) => {
 
@@ -32,6 +33,11 @@ const VitalsHome = ({ navigation }) => {
   const [ bloodValue1, setBloodValue1 ] = React.useState(null);
   const [ bloodValue2, setBloodValue2 ] = React.useState(null);
 
+  // Api.get('ping/').then((response) => {
+  //   console.log(response);
+  // }).catch((x) => {
+  // });
+
   const onSelectDayNumber = (num) => {
     setSelectedDayNumber(num);
   }
@@ -51,7 +57,7 @@ const VitalsHome = ({ navigation }) => {
       setSpValue1(data.spValue1);
     }
     if (data.spValue2 != 0) {
-      setSpValue1(data.spValue2);
+      setSpValue2(data.spValue2);
     }
     if (data.bloodValue1 != 0) {
       setBloodValue1(data.bloodValue1);
@@ -112,9 +118,9 @@ const VitalsHome = ({ navigation }) => {
             {spValue1 == null ?
               <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>N/A</Text>:
               <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-                <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>96</Text>
+                <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>{spValue1}</Text>
                 <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', marginTop: 14, marginRight: 10 }}>%</Text>
-                <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>78</Text>
+                <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>{spValue2}</Text>
                 <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', marginTop: 14 }}>bpm</Text>
               </View>
               }
@@ -129,9 +135,9 @@ const VitalsHome = ({ navigation }) => {
               <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', }}>N/A</Text>:
               <View>
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-                  <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', }}>124</Text>
+                  <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', }}>{bloodValue1}</Text>
                   <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', marginTop: 10 }}>/</Text>
-                  <Text style={{ color: 'red', fontSize: 30, fontWeight: 'bold', marginTop: 12 }}>{' '}70</Text>
+                  <Text style={{ color: 'red', fontSize: 30, fontWeight: 'bold', marginTop: 12 }}>{' '}{bloodValue2}</Text>
                 </View>
                   <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold', marginTop: 14 }}>mmHg</Text>
               </View>

@@ -34,11 +34,6 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: brandColors.brandSecondary
   },
-  prepend: {
-    marginLeft: layoutStyles.paddingMedium,
-    marginRight: -layoutStyles.paddingSmall,
-    opacity: 0.25,
-  },
   input: {
     flex: 1,
     fontFamily: textStyles.fontPrimaryExtraLight,

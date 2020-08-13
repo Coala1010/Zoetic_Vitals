@@ -1,42 +1,35 @@
 {
   "project_info": {
-    "project_number": "822536795778",
-    "firebase_url": "https://peep-dev-a8107.firebaseio.com",
-    "project_id": "peep-dev-a8107",
-    "storage_bucket": "peep-dev-a8107.appspot.com"
+    "project_number": "335376079371",
+    "firebase_url": "https://zoeticvitals.firebaseio.com",
+    "project_id": "zoeticvitals",
+    "storage_bucket": "zoeticvitals.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:822536795778:android:5d1bf2dafce1dcfc07a69b",
+        "mobilesdk_app_id": "1:335376079371:android:93b53a94962e255893850e",
         "android_client_info": {
-          "package_name": "com.peepapp"
+          "package_name": "com.zoetic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "822536795778-0uveh5d1mrnj24397kvvrpnmj3qolsf5.apps.googleusercontent.com",
+          "client_id": "335376079371-d5pcf3b704oggqgtrbb0avutludb2afk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC_6DDmpkkw05-5sc1VVOgosWrlUZ_ksFg"
+          "current_key": "AIzaSyCrkxkUeLGlefuHMPkcuZnvfsASkUbf0WQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "822536795778-0uveh5d1mrnj24397kvvrpnmj3qolsf5.apps.googleusercontent.com",
+              "client_id": "335376079371-d5pcf3b704oggqgtrbb0avutludb2afk.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "822536795778-ul4tuq7nogg9e3phe1tqussbli32bu4f.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.dylogic.peep"
-              }
             }
           ]
         }

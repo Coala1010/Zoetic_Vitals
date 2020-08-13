@@ -18,7 +18,6 @@ const AppInput = ({
   keyboardType,
   maxLength,
   placeholder,
-  prepend,
   returnKeyType,
   textContentType,
   value,
@@ -26,7 +25,6 @@ const AppInput = ({
 }) => {
   return (
     <View style={[ styles.container, styles.containerMulti, style ]}>
-      {prepend && <Text style={styles.prepend}>{prepend}</Text>}
       <TextInput
         autoCapitalize={autoCapitalize}
         autoCompleteType={autoCompleteType}

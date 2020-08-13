@@ -14,7 +14,7 @@ import NativeButton from '../../components/Buttons/NativeButton';
 import PasswordInput from '../../components/Input/PasswordInput';
 // Styles
 import styles from './homeFirstStyles';
-import { brandColors, layoutStyles, textStyles } from '../../styles/baseStyles';
+import { brandColors, textStyles } from '../../styles/baseStyles';
 
 const HomeFirst = ({ navigation }) => {
   const [ country, setCountry ] = useState('uk');

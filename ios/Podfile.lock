@@ -325,8 +325,12 @@ PODS:
     - React
   - RNScreens (2.10.1):
     - React
+  - RNToasty (1.0.2):
+    - React
+    - Toast (~> 4.0.0)
   - RNVectorIcons (7.0.0):
     - React
+  - Toast (4.0.0)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -334,6 +338,7 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
+  - Firebase/Core
   - Firebase/Core (~> 6.3.0)
   - Firebase/Messaging (~> 6.3.0)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
@@ -375,6 +380,7 @@ DEPENDENCIES:
   - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNToasty (from `../node_modules/react-native-toasty/ios`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -394,6 +400,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - Toast
 
 EXTERNAL SOURCES:
   BVLinearGradient:
@@ -476,6 +483,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNToasty:
+    :path: "../node_modules/react-native-toasty/ios"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -536,9 +545,11 @@ SPEC CHECKSUMS:
   RNPermissions: 1888705aebcc81714efa5dbff94351e4388ae012
   RNReanimated: f05ea1c5ee07891aaefee662f073f4944c87ac4d
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
+  RNToasty: fa5545500511c398405e652395384f60ccf285fa
   RNVectorIcons: da6fe858f5a65d7bbc3379540a889b0b12aa5976
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Yoga: 14927e37bd25376d216b150ab2a561773d57911f
 
-PODFILE CHECKSUM: bbae989aa27ded147c2fde8a6c1037d96b9fa992
+PODFILE CHECKSUM: d426f19eb2a66c73077f8592ade09faabd2a70d4
 
 COCOAPODS: 1.9.3

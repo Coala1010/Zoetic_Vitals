@@ -1,8 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
-import { layoutStyles, textStyles, brandColors } from '../../styles/baseStyles';
-
-const routeWidth = Dimensions.get('window').width - layoutStyles.paddingXXLarge * 2;
+import { textStyles, brandColors } from '../../styles/baseStyles';
 
 export default StyleSheet.create({
   screen: {
