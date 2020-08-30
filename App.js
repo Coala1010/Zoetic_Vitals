@@ -78,7 +78,7 @@ const Tab = createBottomTabNavigator();
 const AppStackScreen = () => {
   return (
     <Tab.Navigator
-      initialRouteName='Vitals'
+      initialRouteName='Doctor'
       tabBarOptions={{
         activeTintColor: brandColors.brandPrimary,
         gestureEnabled: false,

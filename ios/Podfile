@@ -35,7 +35,7 @@ target 'Zoetic' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   # Required by RNFirebase
-  pod 'Firebase/Core', '~> 6.3.0'
+  pod 'Firebase/Core'
   pod 'Firebase/Messaging', '~> 6.3.0'
 
   # Permissions
@@ -45,11 +45,7 @@ target 'Zoetic' do
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications.podspec"
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary.podspec"
 
-  pod 'Firebase/Core'
-
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
-
-  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
   target 'ZoeticTests' do
     inherit! :search_paths
